@@ -16,6 +16,12 @@ func PrettyPrint(i interface{}) {
 	fmt.Println(string(x))
 }
 
+// MakePrettyString returns a string of human readable json from things that are not
+func MakePrettyString(i interface{}) string {
+	x, _ := json.MarshalIndent(i, "", "  ")
+	return string(x)
+}
+
 // AreYouSure Are you sure?
 func AreYouSure(i interface{}) bool {
 	answer := false
