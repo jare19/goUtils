@@ -16,8 +16,8 @@ func PrettyPrint(i interface{}) {
 	fmt.Println(string(x))
 }
 
-// MakePrettyString returns a string of human readable json from things that are not
-func MakePrettyString(i interface{}) string {
+// PrettyPrintString returns a string of human readable json from things that are not
+func PrettyPrintString(i interface{}) string {
 	x, _ := json.MarshalIndent(i, "", "  ")
 	return string(x)
 }
